@@ -12,10 +12,11 @@ class DiceRoller extends StatefulWidget{
 }
 
 class _DiceRollerState extends State<DiceRoller>{
+  final randomizer= Random();
   var currentdice = 2;
   void rolldice() {
     setState(() {
-      currentdice = Random().nextInt(6) + 1;
+      currentdice = randomizer.nextInt(6) + 1;
     });
   }
   @override
